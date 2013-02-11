@@ -101,6 +101,32 @@ Description: systemd 128 bit ID utility library
  128 bit IDs.
 Homepage: http://www.freedesktop.org/wiki/Software/systemd
 
+Package: libbluray1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 233
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libbluray
+Version: 1:0.2.2-1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Recommends: libaacs0
+Suggests: libbluray-bdj
+Description: Blu-ray disc playback support library (shared library)
+ libbluray is an open-source library designed for Blu-Ray Discs playback for
+ media players, like VLC or MPlayer. This research project is developed by an
+ international team of developers from Doom9. libbluray integrates navigation,
+ playlist parsing, menus, and BD-J.
+ .
+ NB: Most commercial Blu-Ray are restricted by AACS or BD+ technologies and this
+ library is not enough to playback those discs.
+ .
+ This package provides the shared library.
+Homepage: http://www.videolan.org/developers/libbluray.html
+
 Package: debconf
 Status: install ok installed
 Priority: important
@@ -178,6 +204,27 @@ Description: PolicyKit Authorization API
  .
  This package contains a library for accessing PolicyKit.
 Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+
+Package: libraw1394-11
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 125
+Maintainer: Guus Sliepen <guus@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libraw1394
+Version: 2.0.9-1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Suggests: libraw1394-doc
+Description: library for direct access to IEEE 1394 bus (aka FireWire)
+ libraw1394 is the only supported interface to the kernel side raw1394
+ of the Linux IEEE-1394 subsystem, which provides direct access to the
+ connected 1394 buses to user space.  Through libraw1394/raw1394,
+ applications can directly send to and receive from other nodes without
+ requiring a kernel driver for the protocol in question.
+Homepage: https://ieee1394.wiki.kernel.org/
 
 Package: shared-mime-info
 Status: install ok installed
@@ -301,6 +348,31 @@ Description: GNU core utilities
  timeout touch tr true truncate tsort tty uname unexpand uniq unlink
  users vdir wc who whoami yes
 Homepage: http://gnu.org/software/coreutils
+
+Package: libmtp-common
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 842
+Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: libmtp
+Version: 1.1.3-35-g0ece104-4
+Replaces: libmtp8
+Breaks: libmtp8 (<= 1.0.6-6)
+Description: Media Transfer Protocol (MTP) common files
+ libmtp is a library for communicating with MTP aware devices in POSIX
+ compliant operating systems.  It implements MTP Basic, the subset
+ proposed for standardization.
+ .
+ The Media Transfer Protocol (commonly referred to as MTP) is a devised
+ set of custom extensions to support the transfer of music files on
+ USB digital audio players and movie files on USB portable media players.
+ .
+ This package provides the udev rules file and the FreeDesktop.org Device
+ Information Files file (used by HAL).
+Homepage: http://libmtp.sourceforge.net/
 
 Package: sudo
 Status: install ok installed
@@ -649,6 +721,25 @@ Description: Multiprecision arithmetic library
  interface.
 Homepage: http://gmplib.org/
 
+Package: libzvbi-common
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 217
+Maintainer: Christian Marillat <marillat@debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: zvbi
+Version: 0.2.33-6
+Replaces: libzvbi-0.1 (<= 0.2.1-3)
+Description: Vertical Blanking Interval decoder (VBI) - common files
+ The VBI devices capture the hidden lines on a television picture that carry
+ further information like closed-caption data, Teletext (primarily in
+ Europe), and now Intercast and the ATVEC Internet television encodings.
+ .
+ This package contains internationalization files.
+Homepage: http://zapping.sourceforge.net/ZVBI/index.html
+
 Package: libdbus-1-3
 Status: install ok installed
 Priority: optional
@@ -721,6 +812,24 @@ Description: transitional dummy package (module-init-tools to kmod)
  This dummy package is provided to support the transition from
  module-init-tools to kmod and should be removed afterwards.
 
+Package: libenca0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 220
+Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: i386
+Source: enca
+Version: 1.13-4
+Depends: libc6 (>= 2.1.3)
+Description: Extremely Naive Charset Analyser - shared library files
+ Enca is an Extremely Naive Charset Analyser. It detects the character set and
+ the encoding of text files and can also convert them to other encodings.
+ .
+ This package contains the shared library needed to run applications compiled
+ against libenca.
+Homepage: http://cihar.com/software/enca/
+
 Package: libffi5
 Status: install ok installed
 Priority: optional
@@ -789,6 +898,29 @@ Description: GNU dbm database routines (runtime version)
  providing a persistent version of the 'dictionary' Abstract Data Type
  ('hash' to perl programmers).
 Homepage: http://directory.fsf.org/project/gdbm/
+
+Package: libupnp6
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 396
+Maintainer: Nick Leverton <nick@leverton.org>
+Architecture: i386
+Source: libupnp
+Version: 1:1.6.17-1.2
+Replaces: libupnp0, libupnp2, libupnp3
+Depends: libc6 (>= 2.7)
+Pre-Depends: multiarch-support
+Conflicts: libupnp0, libupnp2, libupnp3, libupnp4 (<< 1.8.0~svn20090313)
+Description: Portable SDK for UPnP Devices, version 1.6 (shared libraries)
+ The Portable SDK for UPnP Devices (libupnp) provides developers with an
+ API and open source code for building control points, devices, and
+ bridges that are compliant with Version 1.0 of the Universal Plug and
+ Play Device Architecture Specification - see http://www.upnp.org/ for
+ specifications.
+ .
+ The libupnp6 package contains the runtime libraries for uPnP.
+Homepage: http://pupnp.sourceforge.net/
 
 Package: libavcodec53
 Status: install ok installed
@@ -893,6 +1025,28 @@ Depends: libc6 (>= 2.4), debianutils (>= 2.8.2)
 Description: common files used by all the isc-dhcp* packages
  This package contains the files used by all the packages from ISC
  DHCP.
+
+Package: libsdl1.2debian
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 525
+Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libsdl1.2
+Version: 1.2.15-5
+Replaces: libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-nas, libsdl1.2debian-oss, libsdl1.2debian-pulseaudio
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libcaca0 (>= 0.99.beta17-1), libdirectfb-1.2-9, libpulse0 (>= 0.99.1), libts-0.0-0 (>= 1.0), libx11-6 (>= 2:1.4.99.1), libxext6
+Pre-Depends: multiarch-support
+Conflicts: libsdl1.2, libsdl1.2-all, libsdl1.2-esd, libsdl1.2-nas, libsdl1.2-oss, libsdl1.2debian-all, libsdl1.2debian-alsa, libsdl1.2debian-esd, libsdl1.2debian-nas, libsdl1.2debian-oss, libsdl1.2debian-pulseaudio
+Description: Simple DirectMedia Layer
+ SDL is a library that allows programs portable low level access to
+ a video framebuffer, audio output, mouse, and keyboard.
+ .
+ This version of SDL is compiled with X11, caca and DirectFB graphics
+ drivers and OSS, ALSA, NAS and PulseAudio sound drivers.
+Homepage: http://www.libsdl.org/
 
 Package: libxinerama1
 Status: install ok installed
@@ -1272,18 +1426,17 @@ Description: utility classes to deal with printing
 Homepage: http://www.kde.org/
 
 Package: libqtgui4
-Status: deinstall ok config-files
+Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 12489
+Installed-Size: 12490
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: qt4-x11
-Version: 4:4.8.2+dfsg-6
-Config-Version: 4:4.8.2+dfsg-6
+Version: 4:4.8.2+dfsg-11
 Replaces: libqt4-core (<< 4.0.1-3), libqt4-designer (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0), qt4-designer (<< 4.1.4)
-Depends: fontconfig, libaudio2, libc6 (>= 2.11), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.12.0), libice6 (>= 1:1.0.0), libjpeg8 (>= 8c), libmng1 (>= 1.0.10), libpng12-0 (>= 1.2.13-4), libqtcore4 (= 4:4.8.2+dfsg-6), libsm6, libstdc++6 (>= 4.1.1), libtiff4 (>> 3.9.5-3~), libx11-6, libxext6, libxrender1, zlib1g (>= 1:1.1.4)
+Depends: fontconfig, libaudio2, libc6 (>= 2.11), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.12.0), libice6 (>= 1:1.0.0), libjpeg8 (>= 8c), libmng1 (>= 1.0.10), libpng12-0 (>= 1.2.13-4), libqtcore4 (= 4:4.8.2+dfsg-11), libsm6, libstdc++6 (>= 4.1.1), libtiff4 (>> 3.9.5-3~), libx11-6, libxext6, libxrender1, zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Recommends: libcups2
 Suggests: qt4-qtconfig
@@ -1367,6 +1520,58 @@ Description: utility libraries for X C Binding -- atom, aux and event
  libraries also provide client-side code which is not strictly part of
  the X protocol but which have traditionally been provided by Xlib.
 Homepage: http://xcb.freedesktop.org
+
+Package: libdvdread4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 171
+Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: i386
+Source: libdvdread
+Version: 4.2.0+20120521-2
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Recommends: libdvdnav4
+Suggests: libdvdcss2
+Description: library for reading DVDs
+ libdvdread provides the functionality that is required to access many DVDs. It
+ parses IFO files, reads NAV-blocks, and performs CSS authentication and
+ descrambling.
+ .
+ libdvdread probes for libdvdcss at runtime and if found, will use it to
+ decrypt sections of the DVD as necessary. libdvdcss needs to be installed from
+ third-party repositories (see README.css), it's not included in Debian.
+Homepage: http://github.com/microe/libdvdread
+
+Package: libv4l-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 166
+Maintainer: Gregor Jasny <gjasny@googlemail.com>
+Architecture: i386
+Multi-Arch: same
+Source: v4l-utils
+Version: 0.8.8-3
+Depends: libv4lconvert0 (= 0.8.8-3), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Description: Collection of video4linux support libraries
+ libv4l is a collection of libraries which adds a thin abstraction layer on
+ top of video4linux2 devices. The purpose of this (thin) layer is to make it
+ easy for application writers to support a wide variety of devices without
+ having to write separate code for different devices in the same class. libv4l
+ consists of 3 different libraries: libv4lconvert, libv4l1 and libv4l2.
+ .
+ libv4l1 offers the (deprecated) v4l1 API on top of v4l2 devices, independent
+ of the drivers for those devices supporting v4l1 compatibility (which many
+ v4l2 drivers do not).
+ .
+ libv4l2 offers the v4l2 API on top of v4l2 devices, while adding for the
+ application transparent libv4lconvert conversion where necessary.
+ .
+ This package contains the shared libraries.
+Homepage: http://linuxtv.org/downloads/v4l-utils/
 
 Package: firmware-ralink
 Status: install ok installed
@@ -1469,6 +1674,34 @@ Description: Pluggable Authentication Modules library
  the applications themselves.
 Homepage: http://pam.sourceforge.net/
 
+Package: libxcb-randr0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 89
+Maintainer: XCB Developers <xcb@lists.freedesktop.org>
+Architecture: i386
+Multi-Arch: same
+Source: libxcb
+Version: 1.8.1-2
+Depends: libc6 (>= 2.1.3), libxcb1
+Pre-Depends: multiarch-support
+Description: X C Binding, randr extension
+ This package contains the library files needed to run software using
+ libxcb-randr, the randr extension for the X C Binding.
+ .
+ The XCB library provides an interface to the X Window System protocol,
+ designed to replace the Xlib interface.  XCB provides several advantages over
+ Xlib:
+ .
+  * Size: small library and lower memory footprint
+  * Latency hiding: batch several requests and wait for the replies later
+  * Direct protocol access: one-to-one mapping between interface and protocol
+  * Thread support: access XCB from multiple threads, with no explicit locking
+  * Easy creation of new extensions: automatically generates interface from
+    machine-parsable protocol descriptions
+Homepage: http://xcb.freedesktop.org
+
 Package: libpci3
 Status: install ok installed
 Priority: standard
@@ -1534,6 +1767,28 @@ Description: userspace USB programming library
  Library for programming USB applications without the knowledge
  of Linux kernel internals.
 Homepage: http://www.linux-usb.org/
+
+Package: libavc1394-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 74
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libavc1394
+Version: 0.5.4-1
+Depends: libc6 (>= 2.7), libraw1394-11
+Pre-Depends: multiarch-support
+Description: control IEEE 1394 audio/video devices
+ libavc1394 is a programming interface for the 1394 Trade Association AV/C
+ (Audio/Video Control) Digital Interface Command Set. It allows you to
+ remote control camcorders and similar devices connected to your computer
+ via an IEEE 1394 (aka Firewire) link.
+ .
+ This package includes the libraries needed to run executables using
+ libavc1394.
+Homepage: http://sourceforge.net/projects/libavc1394/
 
 Package: libgpg-error0
 Status: install ok installed
@@ -1774,6 +2029,28 @@ Description: X.Org X server -- Voodoo display driver
  .
  This package is built from the X.org xf86-video-voodoo driver module.
 
+Package: libwbclient0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 156
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: samba
+Version: 2:3.6.6-5
+Depends: libc6 (>= 2.8)
+Pre-Depends: multiarch-support, dpkg (>= 1.15.6~)
+Breaks: libpam-smbpass (<< 2:3.4.1), libsmbclient (<< 2:3.4.1), samba (<< 2:3.4.1), samba-common (<< 2:3.4.1), samba-tools (<< 2:3.4.1), smbclient (<< 2:3.4.1), smbfs (<< 2:3.4.1), swat (<< 2:3.4.1), winbind (<< 2:3.4.1)
+Description: Samba winbind client library
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package provides a library for client applications that interact
+ via the winbind pipe protocol with a Samba winbind server.
+Homepage: http://www.samba.org
+
 Package: libsystemd-journal0
 Status: install ok installed
 Priority: extra
@@ -1963,6 +2240,22 @@ Description: SSL shared libraries
  .
  It is part of the OpenSSL implementation of SSL.
 
+Package: liba52-0.7.4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 112
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: a52dec
+Version: 0.7.4-16
+Depends: libc6 (>= 2.1.3)
+Description: library for decoding ATSC A/52 streams
+ liba52 is a free library for decoding ATSC A/52 streams. The A/52 standard is
+ used in a variety of applications, including digital television and DVD. It is
+ also known as AC-3.
+Homepage: http://liba52.sourceforge.net/
+
 Package: bzip2
 Status: install ok installed
 Priority: standard
@@ -2085,6 +2378,29 @@ Description: basic infrastructure for text console configuration
  This package contains the install-keymap(8) utility, which is the
  recommended tool to specify a boot-time keymap to the system, as well
  as tools for internal use of keymap-providing packages.
+
+Package: libmatroska5
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 622
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libmatroska
+Version: 1.3.0-2
+Depends: libc6 (>= 2.4), libebml3, libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Description: extensible open standard audio/video container format (shared library)
+ Matroska is aiming to become the standard of Multimedia
+ Container Formats one day. It is based on EBML (Extensible Binary
+ Meta Language), a kind of binary version of XML. This way the
+ significant advantages in terms of future format extensability
+ are gained without breaking file support in old parsers.
+ .
+ This package contains the shared library needed to run applications that
+ use libmatroska.
+Homepage: http://www.matroska.org/
 
 Package: libgdk-pixbuf2.0-0
 Status: install ok installed
@@ -2312,6 +2628,29 @@ Description: commandline package manager
   * apt-config as an interface to the configuration settings
   * apt-key as an interface to manage authentication keys
 
+Package: libmtp9
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 368
+Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libmtp
+Version: 1.1.3-35-g0ece104-4
+Depends: libmtp-common, libc6 (>= 2.4), libgcrypt11 (>= 1.4.5), libusb-1.0-0 (>= 2:1.0.8)
+Pre-Depends: dpkg (>= 1.15.7.2), multiarch-support
+Recommends: libmtp-runtime, udev
+Description: Media Transfer Protocol (MTP) library
+ libmtp is a library for communicating with MTP aware devices in POSIX
+ compliant operating systems.  It implements MTP Basic, the subset
+ proposed for standardization.
+ .
+ The Media Transfer Protocol (commonly referred to as MTP) is a devised
+ set of custom extensions to support the transfer of music files on
+ USB digital audio players and movie files on USB portable media players.
+Homepage: http://libmtp.sourceforge.net/
+
 Package: libxslt1.1
 Status: install ok installed
 Priority: optional
@@ -2367,6 +2706,27 @@ Description: Linux PCI Utilities
  This package contains various utilities for inspecting and setting of
  devices connected to the PCI bus.
 Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+
+Package: libvlc5
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 152
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: vlc
+Version: 2.0.3-4
+Replaces: vlc (<< 0.8.6.c-6)
+Depends: libc6 (>= 2.8), libvlccore5 (>= 2.0.0)
+Pre-Depends: dpkg (>= 1.15.6~)
+Description: multimedia player and streamer library
+ This package contains the shared library required by applications using VLC
+ features.
+ .
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+Homepage: http://www.videolan.org/vlc/
 
 Package: libprocps0
 Status: install ok installed
@@ -3215,6 +3575,27 @@ Description: Ogg bitstream library
  both making ogg bitstreams and getting packets from ogg bitstreams.
 Homepage: http://xiph.org/ogg/
 
+Package: libts-0.0-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 104
+Maintainer: Neil Williams <codehelp@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: tslib
+Version: 1.0-11
+Replaces: libts0, tslib
+Provides: libts0, tslib
+Depends: libc6 (>= 2.1.3), tsconf
+Pre-Depends: multiarch-support
+Conflicts: libts0, tslib
+Description: touch screen library
+ Tslib is an abstraction layer for touchscreen panel events, as well as a
+ filter stack for the manipulation of those events. Examples of implemented
+ filters include jitter smoothing and the calibration transform.
+Homepage: http://tslib.berlios.de/
+
 Package: xserver-xorg-video-radeon
 Status: install ok installed
 Priority: optional
@@ -3701,6 +4082,31 @@ Description: Linux 2.6.32 for modern PCs
  (K7), Duron, Opteron, Sempron, Turion or Phenom; Transmeta Efficeon; VIA
  C3 "Nehemiah" or C7 processors.
 
+Package: libtag1-vanilla
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 738
+Maintainer: Modestas Vainius <modax@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: taglib
+Version: 1.7.2-1
+Replaces: libtag1c2a (<< 1.5-5)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Breaks: libtag1c2a (<< 1.5-5)
+Conflicts: libtag-extras0, libtag1-rusxmms
+Description: audio meta-data library - vanilla flavour
+ TagLib is a library for reading and editing the meta-data of several popular
+ audio formats. Currently it supports both ID3v1 and ID3v2 for MP3 files, Ogg
+ Vorbis comments and ID3 tags and Vorbis comments in FLAC, MPC, Speex, WavPack
+ TrueAudio, WAV, AIFF, MP4 and ASF files.
+ .
+ This is the runtime package for programs that use the TagLib Audio Meta-Data
+ Library. This package contains original and unpatched flavour of the library.
+Homepage: http://developer.kde.org/~wheeler/taglib.html
+
 Package: xserver-xorg-input-evdev
 Status: install ok installed
 Priority: optional
@@ -3869,6 +4275,26 @@ Description: report the search path for a class's ISA tree
  no duplicates.
 Homepage: http://search.cpan.org/dist/Class-ISA/
 
+Package: libsdl-image1.2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 106
+Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: sdl-image1.2
+Version: 1.2.12-2
+Depends: libc6 (>= 2.11), libjpeg8 (>= 8c), libpng12-0 (>= 1.2.13-4), libsdl1.2debian (>= 1.2.11), libtiff4 (>> 3.9.5-3~), libwebp2, zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Description: Image loading library for Simple DirectMedia Layer 1.2, libraries
+ This is a simple library to load images of various formats as SDL surfaces.  It
+ supports the following formats: BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF,
+ WEBP, XCF, XPM, XV.
+ .
+ This package contains the shared library.
+Homepage: http://www.libsdl.org/projects/SDL_image/
+
 Package: libnl1
 Status: install ok installed
 Priority: optional
@@ -3976,7 +4402,7 @@ Description: block device id library
 Homepage: http://userweb.kernel.org/~kzak/util-linux/
 
 Package: libqtcore4
-Status: deinstall ok config-files
+Status: install ok installed
 Priority: optional
 Section: libs
 Installed-Size: 8974
@@ -3984,8 +4410,7 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: qt4-x11
-Version: 4:4.8.2+dfsg-6
-Config-Version: 4:4.8.2+dfsg-6
+Version: 4:4.8.2+dfsg-11
 Replaces: libqt4-core (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0~beta1-1)
 Depends: libc6 (>= 2.9), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.22.0), libstdc++6 (>= 4.6), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
@@ -3997,6 +4422,24 @@ Description: Qt 4 core module
  .
  The QtCore module contains core non-GUI functionality.
 Homepage: http://qt-project.org/
+
+Package: libfribidi0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 135
+Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: fribidi
+Version: 0.19.2-3
+Depends: libc6 (>= 2.3.4)
+Pre-Depends: multiarch-support
+Description: Free Implementation of the Unicode BiDi algorithm
+ FriBiDi is a BiDi algorithm implementation for Hebrew and/or Arabic
+ languages.
+ This package contains the shared libraries.
+Homepage: http://www.fribidi.org/
 
 Package: libcupsfilters1
 Status: install ok installed
@@ -4534,6 +4977,28 @@ Description: Solid Library for KDE Platform
  This package is part of the KDE Development Platform libraries module.
 Homepage: http://solid.kde.org/
 
+Package: libebml3
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 174
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libebml
+Version: 1.2.2-2
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.2.1)
+Pre-Depends: multiarch-support
+Description: access library for the EBML format (shared library)
+ The libebml library allows one to read and write files using EBML (the
+ Extensible Binary Meta Language), a binary pendant to XML. Using libebml
+ makes it easier to extend a file format without breaking support in
+ older parsers.
+ .
+ This package contains the shared library needed to run applications that
+ use libebml.
+Homepage: http://dl.matroska.org/downloads/libebml/
+
 Package: curl
 Status: install ok installed
 Priority: optional
@@ -4556,6 +5021,28 @@ Description: command line tool for transferring data with URL syntax
  busload of other useful tricks.
 Homepage: http://curl.haxx.se
 
+Package: libcddb2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 148
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+Architecture: i386
+Source: libcddb
+Version: 1.3.2-3
+Depends: libc6 (>= 2.7)
+Description: library to access CDDB data - runtime files
+ libcddb is a C library to access data about Audio CD on a CDDB server
+ .
+ It allows to search the database for CD matches, get detailed information
+ about a CD and submit new CD entries to the database.
+ It supports both the custom CDDB protocol and the tunneling of the query
+ over HTTP. HTTP Proxying is supported. It also features a cache system.
+ .
+ This package contains the runtime library required to run libcddb-enabled
+ programs.
+Homepage: http://libcddb.sourceforge.net
+
 Package: libasound2
 Status: install ok installed
 Priority: optional
@@ -4576,6 +5063,24 @@ Description: shared library for ALSA applications
  .
  ALSA is the Advanced Linux Sound Architecture.
 Homepage: http://www.alsa-project.org/
+
+Package: libsmbclient
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 6103
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: samba
+Version: 2:3.6.6-5
+Depends: libc6 (>= 2.11), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (>= 2:3.6.0~pre3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support, dpkg (>= 1.15.6~)
+Description: shared library for communication with SMB/CIFS servers
+ This package provides a shared library that enables client applications
+ to talk to Microsoft Windows and Samba servers using the SMB/CIFS
+ protocol.
+Homepage: http://www.samba.org
 
 Package: libsystemd-daemon0
 Status: install ok installed
@@ -4759,6 +5264,26 @@ Description: Common UNIX Printing System(tm) - Driver library
  drivers.
 Homepage: http://www.cups.org
 
+Package: libcdio13
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 285
+Maintainer: Nicolas Boullis <nboullis@debian.org>
+Architecture: i386
+Source: libcdio
+Version: 0.83-4
+Depends: libc6 (>= 2.3)
+Description: library to read and control CD-ROM
+ This library is to encapsulate CD-ROM reading and
+ control. Applications wishing to be oblivious of the OS- and
+ device-dependant properties of a CD-ROM can use this library.
+ .
+ Some support for disk image types like BIN/CUE and NRG is available,
+ so applications that use this library also have the ability to read
+ disc images as though they were CD's.
+Homepage: http://www.gnu.org/software/libcdio/
+
 Package: libsqlite3-0
 Status: deinstall ok config-files
 Priority: standard
@@ -4829,6 +5354,28 @@ Description: Perl extension for using UUID interfaces as defined in e2fsprogs
  This is a Perl interface to libuuid from e2fsprogs.  It allows generation,
  parsing, and unparsing of UUIDs.
 Homepage: http://search.cpan.org/dist/UUID/
+
+Package: libmodplug1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 355
+Maintainer: Zed Pobre <zed@debian.org>
+Architecture: i386
+Source: libmodplug
+Version: 1:0.8.8.4-3
+Replaces: xmms-modplug (<< 2.04-1)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Conflicts: xmms-modplug (<< 2.04-1)
+Description: shared libraries for mod music based on ModPlug
+ Module files (MOD music, tracker music) are a family of music file
+ formats originating from the MOD file format on Amiga systems used in
+ late 1980s.
+ .
+ This is a library based on the mod music rendering code from ModPlug,
+ a popular Windows mod player written by Olivier Lapicque, found at
+ http://www.modplug.com.
+Homepage: http://modplug-xmms.sourceforge.net/
 
 Package: libcups2
 Status: install ok installed
@@ -5102,6 +5649,29 @@ Description: dynamic window manager
  brings to your desktop.
 Homepage: http://www.suckless.org/
 
+Package: libmpcdec6
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 102
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libmpc
+Version: 2:0.1~r459-4
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Description: MusePack decoder - library
+ Musepack is an audio compression format with a strong emphasis on
+ high quality. It's not lossless, but it is designed for transparency,
+ so that you won't be able to hear differences between the original
+ wave file and the much smaller MPC file.
+ .
+ It is based on the MPEG-1 Layer-2 / MP2 algorithms, but since 1997
+ it has rapidly developed and vastly improved and is now at an advanced
+ stage in which it contains heavily optimized and patentless code.
+Homepage: http://www.musepack.net
+
 Package: libxcb-dri2-0
 Status: install ok installed
 Priority: optional
@@ -5251,6 +5821,25 @@ Description: utility libraries for X C Binding -- aux
  libraries also provide client-side code which is not strictly part of
  the X protocol but which have traditionally been provided by Xlib.
 Homepage: http://xcb.freedesktop.org
+
+Package: libvcdinfo0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 258
+Maintainer: Nicolas Boullis <nboullis@debian.org>
+Architecture: i386
+Source: vcdimager
+Version: 0.7.24+dfsg-0.1
+Depends: libc6 (>= 2.3), libcdio13 (>= 0.83), libiso9660-8 (>= 0.83)
+Description: library to extract information from VideoCD
+ This library can be used to extract information stored on a
+ VideoCD. One use is in media players, such as xine and vlc (where in
+ fact it is currently used). Here libvcdinfo assists in VideoCD
+ navigation, playback control and showing what is contained on a
+ VideoCD. Some standalone programs for this library are vcd-info and
+ vcdxrip (part of the VCDImager distribution).
+Homepage: http://www.gnu.org/software/vcdimager/
 
 Package: libkeyutils1
 Status: install ok installed
@@ -5472,6 +6061,44 @@ Description: X.Org X server -- Rendition display driver
  .
  This package is built from the X.org xf86-video-rendition driver module.
 
+Package: libdirectfb-1.2-9
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 2254
+Maintainer: Debian DirectFB Team <pkg-directfb-devel@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: directfb
+Version: 1.2.10.0-5
+Depends: libc6 (>= 2.7), libts-0.0-0 (>= 1.0)
+Pre-Depends: multiarch-support
+Description: direct frame buffer graphics - shared libraries
+ DirectFB is a graphics library which was designed with embedded systems
+ in mind. It offers maximum hardware accelerated performance at a minimum
+ of resource usage and overhead.
+Homepage: http://www.directfb.org/
+
+Package: libproxy0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 185
+Maintainer: Emilio Pozuelo Monfort <pochu@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libproxy
+Version: 0.3.1-5.1
+Depends: libc6 (>= 2.3.6-6~)
+Pre-Depends: multiarch-support
+Recommends: libwebkitgtk-1.0-0 | libmozjs10d
+Description: automatic proxy configuration management library (shared)
+ libproxy is a lightweight library which makes it easy to develop
+ applications proxy-aware with a simple and stable API.
+ .
+ This package contains the shared library.
+Homepage: http://code.google.com/p/libproxy/
+
 Package: cups-filters
 Status: install ok installed
 Priority: optional
@@ -5615,6 +6242,69 @@ Original-Uploaders: Bastian Blank <waldi@debian.org>, Frederik Schüler <fs@debi
 Original-Vcs-Browser: http://anonscm.debian.org/viewvc/kernel/dists/trunk/linux/
 Original-Vcs-Svn: svn://svn.debian.org/svn/kernel/dists/trunk/linux/
 Uploaders: Daniel Baumann <daniel.baumann@progress-linux.org>
+
+Package: libtwolame0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 184
+Maintainer: Debian MythTV Team <pkg-mythtv-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: twolame
+Version: 0.3.13-1
+Depends: libc6 (>= 2.1.3)
+Description: MPEG Audio Layer 2 encoding library
+ TwoLAME is an optimized MPEG Audio Layer 2 encoder. It is based on tooLAME by
+ Mike Cheng, which in turn is based upon the ISO dist10 code and portions of
+ LAME.
+ .
+ TwoLAME does NOT support MPEG Audio Layer 3 (MP3) encoding due to patent
+ issues surrounding MP3.
+ .
+ However, as most MPEG Audio players are able to play layer 2 (MP2) files,
+ TwoLAME makes a very good drop-in replacement for LAME and other layer 3
+ encoders.
+ .
+ This package contains the shared library.
+Homepage: http://www.twolame.org
+
+Package: libdca0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 193
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: libdca
+Version: 0.0.5-5
+Depends: libc6 (>= 2.3.4)
+Description: decoding library for DTS Coherent Acoustics streams
+ libdca provides a low-level interface to decode audio frames encoded using
+ DTS Coherent Acoustics. DTS Coherent Acoustics streams are commonly found
+ on DVDs, DTS audio CDs and some radio broadcastings. libdca also provides
+ downmixing and dynamic range compression for various output configurations.
+ .
+ This package contains the shared library.
+Homepage: http://www.videolan.org/developers/libdca.html
+
+Package: libass4
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 166
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libass
+Version: 0.10.0-3
+Depends: libc6 (>= 2.7), libenca0 (>= 1.9), libfontconfig1 (>= 2.8.0), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2)
+Pre-Depends: multiarch-support
+Description: library for SSA/ASS subtitles rendering
+ SubStation Alpha (SSA) is a subtitle file format that allows more
+ advanced subtitles than the conventional SRT and similar formats.
+ .
+ This package contains the shared library for libass.
+Homepage: http://code.google.com/p/libass/
 
 Package: libevent-1.4-2
 Status: install ok installed
@@ -6123,6 +6813,29 @@ Description: common files for the GTK+ graphical user interface library
  This package contains the common files which the libraries need.
 Homepage: http://www.gtk.org/
 
+Package: vlc-data
+Status: install ok installed
+Priority: optional
+Section: video
+Installed-Size: 26400
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: vlc
+Version: 2.0.3-4
+Replaces: mozilla-plugin-vlc (<< 0.9.2-1), vlc (<< 0.9.2-1), vlc-nox (<< 2.0.1-3)
+Pre-Depends: dpkg (>= 1.15.6~)
+Breaks: vlc-nox (<< 2.0.1-3)
+Conffiles:
+ /etc/vlc/lua/http/dialogs/.hosts ba6042287e8f67c1b413d87db043af16
+ /etc/vlc/lua/http/.hosts 487bfe8c3948da33c57775ea867101cb
+Description: Common data for VLC
+ Localisations, HTTP interface files, Lua scripts for VLC media player
+ .
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+Homepage: http://www.videolan.org/vlc/
+
 Package: xserver-xorg-video-tdfx
 Status: install ok installed
 Priority: optional
@@ -6169,6 +6882,24 @@ Description: X C Binding, glx extension
   * Easy creation of new extensions: automatically generates interface from
     machine-parsable protocol descriptions
 Homepage: http://xcb.freedesktop.org
+
+Package: libshout3
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 113
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libshout
+Version: 2.2.2-8
+Depends: libc6 (>= 2.4), libogg0 (>= 1.0rc3), libspeex1 (>= 1.2~beta3-1), libtheora0 (>= 0.0.0.alpha7.dfsg), libvorbis0a (>= 1.1.2)
+Pre-Depends: multiarch-support
+Description: MP3/Ogg Vorbis broadcast streaming library
+ A library for communicating with and sending data to Icecast and Icecast 2
+ streaming audio servers.  It handles the socket connection, the timing of
+ the data transmission, and prevents bad data from getting to the server.
+Homepage: http://www.icecast.org/
 
 Package: libglapi-mesa
 Status: install ok installed
@@ -6226,6 +6957,25 @@ Description: Tag Image File Format (TIFF) library (old version)
  (TIFF), a widely used format for storing image data.  This package
  includes the shared library.
 Homepage: http://libtiff.maptools.org
+
+Package: libtar0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 74
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Architecture: i386
+Source: libtar
+Version: 1.2.16-1
+Replaces: libtar
+Provides: libtar
+Depends: libc6 (>= 2.4)
+Breaks: libtar
+Description: C library for manipulating tar archives
+ libtar allows programs to create, extract and test tar archives.
+ It supports both the strict POSIX tar format and many of the commonly-used
+ GNU extensions.
+Homepage: http://www.feep.net/libtar/
 
 Package: libhunspell-1.2-0
 Status: install ok installed
@@ -6568,6 +7318,28 @@ Description: The Ghostscript PostScript/PDF interpreter Library
  This package provides the Ghostscript library which makes the
  facilities of Ghostscript available to applications.
 Homepage: http://www.ghostscript.com/
+
+Package: libdirac-decoder0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 595
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: dirac
+Version: 1.0.2-6
+Replaces: libdirac0, libdirac0c2a
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Conflicts: libdirac0, libdirac0c2a
+Description: open and royalty free high quality video codec - decoder library
+ Dirac is an advanced royalty-free video compression format designed for a wide
+ range of uses, from delivering low-resolution web content to broadcasting HD
+ and beyond, to near-lossless studio editing.
+ .
+ This package contains the dirac decoder library.
+Homepage: http://diracvideo.org/
 
 Package: libkrb5support0
 Status: install ok installed
@@ -7875,6 +8647,24 @@ Description: high-level terminal interface library for C++ (runtime files)
  compiled against libcwidget.
 Homepage: http://cwidget.alioth.debian.org
 
+Package: libkate1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 148
+Maintainer: Debian Xiph.org Maintainers <pkg-xiph-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: libkate
+Version: 0.4.1-1
+Depends: libc6 (>= 2.1.3)
+Description: Kate is a codec for karaoke and text encapsulation
+ Kate is meant to be used for karaoke alongside audio/video streams (typically
+ Vorbis and Theora), movie subtitles, song lyrics, and anything that needs text
+ data at arbitrary time intervals.
+ .
+ libkate provides an API for the encoding and decoding of kate files.
+Homepage: http://code.google.com/p/libkate/
+
 Package: libsasl2-2
 Status: install ok installed
 Priority: standard
@@ -8071,6 +8861,38 @@ Description: X Keyboard Extension (XKB) configuration data
  to provide a central repository that could be used by all vendors.
 Homepage: http://www.freedesktop.org/Software/XKeyboardConfig
 
+Package: vlc-nox
+Status: install ok installed
+Priority: optional
+Section: video
+Installed-Size: 8825
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: vlc
+Version: 2.0.3-4
+Replaces: vlc (<< 1.1.0)
+Provides: mp3-decoder
+Depends: liba52-0.7.4, libasound2 (>= 1.0.16), libass4 (>= 0.9.7), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavc1394-0 (>= 0.5.3), libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.4), libavformat53 (>= 6:0.8.3-1~), libavutil51 (>= 6:0.8.3-1~), libbluray1, libc6 (>= 2.8), libcddb2, libcdio13 (>= 0.83), libcrystalhd3, libdbus-1-3 (>= 1.2.16), libdc1394-22, libdca0, libdirac-decoder0, libdirac-encoder0, libdirectfb-1.2-9, libdvbpsi7 (>= 0.2.0), libdvdnav4 (>= 4.2.0+20120524), libdvdread4, libebml3, libfaad2 (>= 2.7), libflac8 (>= 1.2.1), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgcc1 (>= 1:4.1.1), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgpg-error0 (>= 1.10), libiso9660-8 (>= 0.83), libkate1 (>= 0.3.0), liblircclient0, liblua5.1-0, libmad0 (>= 0.15.1b-3), libmatroska5, libmodplug1, libmpcdec6 (>= 1:0.1~r435), libmpeg2-4, libmtp9 (>= 1.1.0), libncursesw5 (>= 5.6+20070908), libogg0 (>= 1.1.0), libpng12-0 (>= 1.2.13-4), libpostproc52 (>= 6:0.8.3-1~), libproxy0 (>= 0.2.3), libraw1394-11, libresid-builder0c2a, libsamplerate0 (>= 0.1.7), libschroedinger-1.0-0 (>= 1.0.10), libshout3, libsidplay2, libsmbclient (>= 3.0.24), libspeex1 (>= 1.2~beta3-1), libspeexdsp1 (>= 1.2~beta3.2-1), libstdc++6 (>= 4.6), libswscale2 (>= 6:0.8.3-1~), libtag1c2a (>= 1.7), libtheora0 (>= 1.0), libtinfo5, libtwolame0, libudev0 (>= 146), libupnp6 (>= 1.4.3), libusb-1.0-0 (>= 2:1.0.8), libv4l-0 (>= 0.5.0), libvcdinfo0 (>= 0.7.21), libvlc5 (>= 2.0.0), libvlccore5 (>= 2.0.2), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libx264-123, libxml2 (>= 2.7.4), libzvbi0 (>= 0.2.11), zlib1g (>= 1:1.2.0.2)
+Pre-Depends: dpkg (>= 1.15.6~)
+Description: multimedia player and streamer (without X support)
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+ .
+ VLC can also be used as a streaming server that duplicates the stream it
+ reads and multicasts them through the network to other clients, or serves
+ them through HTTP.
+ .
+ VLC has support for on-the-fly transcoding of audio and video formats, either
+ for broadcasting purposes or for movie format transformations. Support for
+ most output methods is provided by this package, but features can be added
+ by installing additional audio plugins (vlc-plugin-pulse, vlc-plugin-sdl,
+ vlc-plugin-jack) or video plugins (vlc-plugin-sdl).
+ .
+ This package contains a version of VLC that does not require X and that is
+ thus suitable for headless servers.
+Homepage: http://www.videolan.org/vlc/
+
 Package: libacl1
 Status: install ok installed
 Priority: required
@@ -8227,6 +9049,50 @@ Description: S-Lang programming library - runtime version
  as jed and slrn). If you plan on doing development with S-Lang, you will
  need the companion -dev package as well.
 Homepage: http://www.jedsoft.org/slang/
+
+Package: libdc1394-22
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 281
+Maintainer: Guus Sliepen <guus@debian.org>
+Architecture: i386
+Multi-Arch: same
+Version: 2.2.0-2
+Depends: libc6 (>= 2.3.6-6~), libraw1394-11, libusb-1.0-0 (>= 2:1.0.8)
+Pre-Depends: multiarch-support
+Description: high level programming interface for IEEE1394 digital camera
+ libdc1394 is a library that is intended to provide a high level
+ programming interface for application developers who wish to control
+ IEEE 1394 based cameras that conform to the 1394-based Digital Camera
+ Specification (found at http://www.1394ta.org/).
+ .
+ This version of libdc1394 supports both the old and new (juju) FireWire stack.
+ It automatically detects which one to use at runtime.
+ .
+ This package contains shared libraries.
+Homepage: http://damien.douxchamps.net/ieee1394/libdc1394/
+
+Package: libcrystalhd3
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 142
+Maintainer: Andres Mejia <amejia@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: crystalhd
+Version: 1:0.0~git20110715.fdd2f19-7
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Suggests: firmware-crystalhd
+Description: Crystal HD Video Decoder (shared library)
+ Crystal HD Solution is a product offered by Broadcom. It is used to enable
+ flawless playback of 1080p high definition video across a wide range of
+ systems.
+ .
+ This package contains the shared library.
+Homepage: http://www.broadcom.com/support/crystal_hd/
 
 Package: mozplugger
 Status: install ok installed
@@ -8633,6 +9499,48 @@ Description: JasPer JPEG-2000 runtime library
  .
  This package contains the shared library.
 
+Package: libva-x11-1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 68
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libva
+Version: 1.0.15-4
+Depends: libc6 (>= 2.1.3), libdrm2 (>= 2.3.1), libx11-6, libxext6, libxfixes3
+Pre-Depends: multiarch-support
+Description: Video Acceleration (VA) API for Linux -- X11 runtime
+ Video Acceleration API (VA API) is a library ("libVA") and API specification
+ which enables and provides access to graphics hardware (GPU) acceleration for
+ video processing on Linux and UNIX based operating systems. Accelerated
+ processing includes video decoding, video encoding, subpicture blending and
+ rendering. The specification was originally designed by Intel for its GMA
+ (Graphics Media Accelerator) series of GPU hardware, the API is however not
+ limited to GPUs or Intel specific hardware, as other hardware and manufacturers
+ can also freely use this API for hardware accelerated video decoding.
+ .
+ This package provides the libva-x11 library.
+Homepage: http://www.freedesktop.org/wiki/Software/vaapi
+
+Package: libresid-builder0c2a
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 226
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: sidplay-libs
+Version: 2.1.1-13
+Replaces: libresid-builder0, libresid2c102 (<= 2.1.1-2)
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Conflicts: libresid-builder0, libresid2c102 (<= 2.1.1-2)
+Description: SID chip emulation class based on resid
+ SID builder packages provide a chip emulator, to be used by libsidplay2.
+ This package is an emulation based on the resid library, including hardsid
+ support.
+
 Package: git-man
 Status: install ok installed
 Priority: optional
@@ -8842,6 +9750,30 @@ Description: ATK accessibility toolkit
  .
  This is the runtime part of ATK, needed to run applications built with it.
 Homepage: http://www.gtk.org/
+
+Package: libsidplay2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 280
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: sidplay-libs
+Version: 2.1.1-13
+Replaces: libsidplay2-1, libsidplay2-1c102 (<= 2.1.1-2)
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Conflicts: libsidplay2-1, libsidplay2-1c102 (<= 2.1.1-2)
+Description: SID (MOS 6581) emulation library
+ This is a (shared) library that implements the emulation of the C64's
+ SID chip (MOS 6581) and CPU (6510). It is used by several "player"
+ applications, e.g. sidplay, which make it possible to listen to *really*
+ a lot (13.600+) of tunes, known from old and new C64 programs (as well
+ as Amiga compositions).
+ .
+ Find most of the available musics from your favourite games or demos
+ and more in the High Voltage SID Collection (HVSC). For downloads and
+ information about the volunteers, who maintain the collection, look at
+ the HVSC homepage http://www.hvsc.c64.org.
 
 Package: liblzma5
 Status: install ok installed
@@ -9119,6 +10051,25 @@ Description: X.Org X server -- MGA display driver
  .
  This package is built from the X.org xf86-video-mga driver module.
 
+Package: libgpm2
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 77
+Maintainer: Peter Samuelson <peter@p12n.org>
+Architecture: i386
+Multi-Arch: same
+Source: gpm
+Version: 1.20.4-6
+Depends: libc6 (>= 2.7)
+Pre-Depends: multiarch-support
+Suggests: gpm
+Description: General Purpose Mouse - shared library
+ This package provides a library that handles mouse requests
+ and delivers them to applications. See the description for the 'gpm'
+ package for more information.
+Homepage: http://www.nico.schottelius.org/software/gpm/
+
 Package: libdb5.1
 Status: install ok installed
 Priority: standard
@@ -9245,6 +10196,24 @@ Description: X.Org X server -- i128 display driver
  .
  This package is built from the X.org xf86-video-i128 driver module.
 
+Package: liblircclient0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 68
+Maintainer: lirc Maintainer Team <pkg-lirc-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: lirc
+Version: 0.9.0~pre1-1
+Depends: libc6 (>= 2.7)
+Suggests: lirc
+Description: infra-red remote control support - client library
+ LIRC stands for 'Linux Infra-red Remote Control'.
+ .
+ This package provides a library with functions to support remote
+ controls via LIRC in programs such as xawtv.
+Homepage: http://lirc.org
+
 Package: syslinux
 Status: install ok installed
 Priority: optional
@@ -9337,6 +10306,27 @@ Description: Open source MPEG-4 video codec (library)
  .
  This package contains the shared library.
 Homepage: http://www.xvid.org/
+
+Package: libv4lconvert0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 251
+Maintainer: Gregor Jasny <gjasny@googlemail.com>
+Architecture: i386
+Multi-Arch: same
+Source: v4l-utils
+Version: 0.8.8-3
+Replaces: libv4l-0 (<< 0.8.5-4)
+Depends: libc6 (>= 2.11), libjpeg8 (>= 8c)
+Pre-Depends: multiarch-support
+Breaks: libv4l-0 (<< 0.8.5-4)
+Description: Video4linux frame format conversion library
+ libv4lconvert offers functions to convert from any (known) pixelformat
+ to BGR24, RGB24, YUV420 and YVU420.
+ .
+ This package contains the shared library.
+Homepage: http://linuxtv.org/downloads/v4l-utils/
 
 Package: libpcre3
 Status: install ok installed
@@ -9653,6 +10643,55 @@ Description: Linux Kernel Device Mapper userspace library
  .
  This package contains a utility for modifying device mappings.
 Homepage: http://sources.redhat.com/lvm2/
+
+Package: tsconf
+Status: install ok installed
+Priority: optional
+Section: embedded
+Installed-Size: 50
+Maintainer: Neil Williams <codehelp@debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: tslib
+Version: 1.0-11
+Replaces: libts-0.0-0 (<= 1.0-6)
+Conffiles:
+ /etc/ts.conf 4783b67c395ff75d49d5a462c0b9fafe
+Description: touch screen library common files
+ Tslib is an abstraction layer for touchscreen panel events, as well
+ as a filter stack for the manipulation of those events.
+ .
+ This package contains the common files for the shared
+ library.
+Homepage: http://tslib.berlios.de/
+
+Package: libxcb-composite0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 49
+Maintainer: XCB Developers <xcb@lists.freedesktop.org>
+Architecture: i386
+Multi-Arch: same
+Source: libxcb
+Version: 1.8.1-2
+Depends: libc6 (>= 2.1.3), libxcb1
+Pre-Depends: multiarch-support
+Description: X C Binding, composite extension
+ This package contains the library files needed to run software using
+ libxcb-composite, the composite extension for the X C Binding.
+ .
+ The XCB library provides an interface to the X Window System protocol,
+ designed to replace the Xlib interface.  XCB provides several advantages over
+ Xlib:
+ .
+  * Size: small library and lower memory footprint
+  * Latency hiding: batch several requests and wait for the replies later
+  * Direct protocol access: one-to-one mapping between interface and protocol
+  * Thread support: access XCB from multiple threads, with no explicit locking
+  * Easy creation of new extensions: automatically generates interface from
+    machine-parsable protocol descriptions
+Homepage: http://xcb.freedesktop.org
 
 Package: eject
 Status: install ok installed
@@ -10010,6 +11049,25 @@ Description: X.Org X server -- Chips display driver
  .
  This package is built from the X.org xf86-video-chips driver module.
 
+Package: libzvbi0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 626
+Maintainer: Christian Marillat <marillat@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: zvbi
+Version: 0.2.33-6
+Replaces: libzvbi-0.1 (<= 0.2.1-3)
+Depends: libc6 (>= 2.8), libpng12-0 (>= 1.2.13-4), zlib1g (>= 1:1.1.4), libzvbi-common (= 0.2.33-6)
+Pre-Depends: multiarch-support
+Description: Vertical Blanking Interval decoder (VBI) - runtime files
+ The VBI devices capture the hidden lines on a television picture that carry
+ further information like closed-caption data, Teletext (primarily in
+ Europe), and now Intercast and the ATVEC Internet television encodings.
+Homepage: http://zapping.sourceforge.net/ZVBI/index.html
+
 Package: xserver-xorg-video-intel
 Status: install ok installed
 Priority: optional
@@ -10103,6 +11161,45 @@ Description: X.Org X server -- ATI Mach64 display driver
  .
  This package is built from the X.org xf86-video-mach64 driver module.
 
+Package: libcaca0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1035
+Maintainer: Sam Hocevar <sho@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libcaca
+Version: 0.99.beta18-1
+Depends: libc6 (>= 2.7), libgcc1 (>= 1:4.1.1), libncursesw5 (>= 5.6+20070908), libslang2 (>= 2.0.7-1), libstdc++6 (>= 4.1.1), libtinfo5, zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Description: colour ASCII art library
+ libcaca is the Colour AsCii Art library. It provides high level functions
+ for colour text drawing, simple primitives for line, polygon and ellipse
+ drawing, as well as powerful image to text conversion routines.
+ .
+ This package contains the shared library for libcaca.
+Homepage: http://caca.zoy.org/wiki/libcaca
+
+Package: libdvdnav4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 225
+Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: i386
+Source: libdvdnav
+Version: 4.2.0+20120524-2
+Depends: libc6 (>= 2.4), libdvdread4
+Pre-Depends: multiarch-support
+Suggests: libdvdcss2
+Description: DVD navigation library
+ libdvdnav is a DVD navigation library, which provides an interface to the
+ advanced features of DVDs, like menus and navigation. It contains the VM and
+ other parts useful for writing DVD players. It's based on Ogle, but was
+ modified to be used by xine and mplayer.
+Homepage: http://github.com/microe/libdvdnav
+
 Package: libcupscgi1
 Status: install ok installed
 Priority: optional
@@ -10182,6 +11279,53 @@ Description: shared low-level terminfo library for terminal handling
  .
  This package contains the shared low-level terminfo library.
 Homepage: http://invisible-island.net/ncurses/
+
+Package: liblua5.1-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 401
+Maintainer: John V. Belmonte <jbelmonte@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: lua5.1
+Version: 5.1.5-4
+Depends: libc6 (>= 2.11), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Description: Shared library for the Lua interpreter version 5.1
+ Lua is a powerful, light-weight programming language designed for extending
+ applications.  The language engine is accessible as a library, having a C
+ API which allows the application to exchange data with Lua programs and also
+ to extend Lua with C functions.  Lua is also used as a general-purpose,
+ stand-alone language through the simple command line interpreter provided.
+ .
+ This package contains runtime libraries.  You shouldn't need to install it
+ explicitly.
+Homepage: http://www.lua.org
+
+Package: libtag1c2a
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 33
+Maintainer: Modestas Vainius <modax@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: taglib
+Version: 1.7.2-1
+Depends: libtag1-vanilla (= 1.7.2-1) | libtag1-rusxmms (= 1.7.2-1)
+Conflicts: libtag-extras0
+Description: audio meta-data library
+ TagLib is a library for reading and editing the meta-data of several popular
+ audio formats. Currently it supports both ID3v1 and ID3v2 for MP3 files, Ogg
+ Vorbis comments and ID3 tags and Vorbis comments in FLAC, MPC, Speex, WavPack
+ TrueAudio, WAV, AIFF, MP4 and ASF files.
+ .
+ This package is the main metapackage for the TagLib Audio Meta-Data Library.
+ Packages using TagLib should depend on this package rather than specific
+ TagLib flavour. Vanilla (original) flavour is default. Alternatively you may
+ install RusXMMS flavour which can be found in the libtag1-rusxmms package.
+Homepage: http://developer.kde.org/~wheeler/taglib.html
 
 Package: libjbig2dec0
 Status: install ok installed
@@ -10449,6 +11593,23 @@ Description: Rasqal RDF query library
  memory leaks) and to track ongoing RDF query language work.
 Homepage: http://librdf.org/rasqal/
 
+Package: mozilla-plugin-vlc
+Status: install ok installed
+Priority: optional
+Section: oldlibs
+Installed-Size: 27
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: npapi-vlc
+Version: 2.0.0-2
+Depends: browser-plugin-vlc
+Description: transitional dummy package
+ This is a transitional dummy package for renaming mozilla-plugin-vlc to
+ browser-plugin-vlc.
+ .
+ It can be safely removed when browser-plugin-vlc is installed.
+Homepage: http://www.videolan.org/vlc/
+
 Package: alsa-base
 Status: install ok installed
 Priority: optional
@@ -10502,6 +11663,34 @@ Description: OpenLDAP libraries
  These are the run-time libraries for the OpenLDAP (Lightweight Directory
  Access Protocol) servers and clients.
 Homepage: http://www.openldap.org/
+
+Package: libxcb-xfixes0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 68
+Maintainer: XCB Developers <xcb@lists.freedesktop.org>
+Architecture: i386
+Multi-Arch: same
+Source: libxcb
+Version: 1.8.1-2
+Depends: libc6 (>= 2.1.3), libxcb1
+Pre-Depends: multiarch-support
+Description: X C Binding, xfixes extension
+ This package contains the library files needed to run software using
+ libxcb-xfixes, the xfixes extension for the X C Binding.
+ .
+ The XCB library provides an interface to the X Window System protocol,
+ designed to replace the Xlib interface.  XCB provides several advantages over
+ Xlib:
+ .
+  * Size: small library and lower memory footprint
+  * Latency hiding: batch several requests and wait for the replies later
+  * Direct protocol access: one-to-one mapping between interface and protocol
+  * Thread support: access XCB from multiple threads, with no explicit locking
+  * Easy creation of new extensions: automatically generates interface from
+    machine-parsable protocol descriptions
+Homepage: http://xcb.freedesktop.org
 
 Package: libmhash2
 Status: install ok installed
@@ -10773,6 +11962,28 @@ Description: X11 Testing -- Record extension library
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libXtst
 
+Package: libpostproc52
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 394
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libav
+Version: 6:0.8.5-1
+Replaces: libpostproc-extra-52
+Provides: libpostproc-extra-52
+Depends: libavutil51 (>= 6:0.8.3-1~), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Breaks: libpostproc-extra-52 (<< 5:0.8.1-2)
+Description: Libav video postprocessing library
+ Libav is a complete, cross-platform solution to decode, encode, record,
+ convert and stream audio and video.
+ .
+ This is the video postprocessing library from Libav.
+Homepage: http://libav.org/
+
 Package: nano
 Status: install ok installed
 Priority: important
@@ -10906,6 +12117,25 @@ Description: X11 Inter-Client Exchange library
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libICE
 
+Package: libvlccore5
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1073
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: vlc
+Version: 2.0.3-4
+Depends: vlc-data (= 2.0.3-4), libc6 (>= 2.10), libdbus-1-3 (>= 1.0.2)
+Pre-Depends: dpkg (>= 1.15.6~)
+Description: base library for VLC and its modules
+ This package contains the shared library required by VLC modules and libvlc.
+ .
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+Homepage: http://www.videolan.org/vlc/
+
 Package: libjson0
 Status: install ok installed
 Priority: extra
@@ -10923,6 +12153,31 @@ Description: JSON manipulation library - shared library
  output them as JSON formatted strings and parse JSON formatted
  strings back into the C representation of JSON objects.
 Homepage: http://oss.metaparadigm.com/json-c/
+
+Package: libxcb-keysyms1
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 53
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: xcb-util-keysyms
+Version: 0.3.9-1
+Depends: libc6 (>= 2.1.3), libxcb1
+Pre-Depends: multiarch-support
+Description: utility libraries for X C Binding -- keysyms
+ This package contains the library files needed to run software using
+ libxcb-keysyms, providing standard X key constants and conversion to/from
+ keycodes.
+ .
+ The xcb-util module provides a number of libraries which sit on top of
+ libxcb, the core X protocol library, and some of the extension
+ libraries. These experimental libraries provide convenience functions
+ and interfaces which make the raw X protocol more usable. Some of the
+ libraries also provide client-side code which is not strictly part of
+ the X protocol but which have traditionally been provided by Xlib.
+Homepage: http://xcb.freedesktop.org
 
 Package: libp11-kit0
 Status: install ok installed
@@ -11178,6 +12433,61 @@ Description: Client library to control the FAM daemon
  the FAM daemon and ask for files to be monitored.
 Homepage: http://oss.sgi.com/projects/fam/
 
+Package: browser-plugin-vlc
+Status: install ok installed
+Priority: optional
+Section: video
+Installed-Size: 187
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: npapi-vlc
+Version: 2.0.0-2
+Replaces: mozilla-plugin-vlc (<< 2.0.0)
+Depends: vlc, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.3.4), libcairo2 (>= 1.2.4), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.1.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.24.0), libice6 (>= 1:1.0.0), libpango1.0-0 (>= 1.14.0), libsm6, libstdc++6 (>= 4.1.1), libvlc5 (>= 1.1.0), libx11-6
+Breaks: mozilla-plugin-vlc (<< 2.0.0)
+Description: multimedia plugin for web browsers based on VLC
+ This plugin adds support for MPEG, MPEG2, DVD, DivX, Ogg/Vorbis and many
+ more formats to any Gecko-based web browser (Firefox, Galeon, etc.). The
+ decoding process is done by VLC and the output window is embedded in a
+ webpage or directly in the browser window. There is also support for
+ fullscreen display and javascript control.
+ .
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+Homepage: http://www.videolan.org/vlc/
+Npp-Applications: 92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a,
+                     ec8030f7-c20a-464f-9b0e-13a3a9e97384
+Npp-Description: play video and audio in Firefox using the VLC Multimedia Player
+Npp-File: libvlcplugin.so
+Npp-Mimetype: application/mpeg4-iod,
+                 application/mpeg4-muxcodetable,
+                 application/ogg,
+                 application/x-google-vlc-plugin,
+                 application/x-mplayer2,
+                 application/x-ogg,
+                 application/x-vlc-plugin,
+                 audio/3gpp,
+                 audio/3gpp2,
+                 audio/mpeg,
+                 audio/mpeg4,
+                 audio/wav,
+                 audio/x-mpeg,
+                 audio/x-wav,
+                 video/3gpp,
+                 video/3gpp2,
+                 video/mpeg,
+                 video/mpeg-system,
+                 video/mpeg4,
+                 video/quicktime,
+                 video/x-mpeg,
+                 video/x-mpeg-system,
+                 video/x-ms-asf,
+                 video/x-ms-asf-plugin,
+                 video/x-ms-wmv,
+                 video/x-msvideo
+Npp-Name: VLC Multimedia Plugin
+
 Package: libiw30
 Status: install ok installed
 Priority: extra
@@ -11233,6 +12543,43 @@ Description: client for setting system time from NTP servers
  ntpdate is not necessary.
 Homepage: http://support.ntp.org/
 
+Package: libaa1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 161
+Maintainer: Gergely Nagy <algernon@madhouse-project.org>
+Architecture: i386
+Multi-Arch: same
+Source: aalib
+Version: 1.4p5-40
+Replaces: aalib1
+Provides: aalib1
+Depends: libc6 (>= 2.11), libgpm2 (>= 1.20.4), libncurses5 (>= 5.5-5~), libslang2 (>= 2.2.4), libtinfo5, libx11-6
+Pre-Depends: multiarch-support
+Description: ASCII art library
+ AAlib is a portable ASCII art graphics library. Internally, it works like
+ a graphics display, but the output is rendered into gorgeous platform
+ independent ASCII graphics.
+Homepage: http://aa-project.sourceforge.net/aalib/
+
+Package: libtalloc2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 83
+Maintainer: Jelmer Vernooij <jelmer@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: talloc
+Version: 2.0.7+git20120207-1
+Depends: libc6 (>= 2.1.3)
+Pre-Depends: multiarch-support
+Description: hierarchical pool based memory allocator
+ A hierarchical pool based memory allocator with destructors. It uses
+ reference counting to determine when memory should be freed.
+Homepage: http://talloc.samba.org/
+
 Package: libc6
 Status: install ok installed
 Priority: required
@@ -11280,6 +12627,37 @@ Description: X11 Session Management library
  .
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libSM
+
+Package: vlc
+Status: install ok installed
+Priority: optional
+Section: video
+Installed-Size: 3368
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Version: 2.0.3-4
+Replaces: vlc-data (<< 1.1.5), vlc-nox (<< 2.0.2)
+Provides: mp3-decoder
+Depends: fonts-freefont-ttf, vlc-nox (= 2.0.3-4), libaa1 (>= 1.4p5), libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.4), libavutil51 (>= 6:0.8.3-1~), libc6 (>= 2.8), libcaca0 (>= 0.99.beta17-1), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libice6 (>= 1:1.0.0), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.7.0~beta1), libsdl-image1.2 (>= 1.2.10), libsdl1.2debian (>= 1.2.11), libsm6, libstdc++6 (>= 4.6), libtar0, libva-x11-1 (>> 1.0.15~), libva1 (>> 1.0.15~), libvlccore5 (>= 2.0.0), libx11-6, libxcb-composite0, libxcb-keysyms1 (>= 0.3.9), libxcb-randr0 (>= 1.1), libxcb-render0, libxcb-shape0, libxcb-shm0, libxcb-xfixes0, libxcb-xv0 (>= 1.2), libxcb1 (>= 1.6), libxext6, libxinerama1, libxpm4, zlib1g (>= 1:1.2.3.3)
+Pre-Depends: dpkg (>= 1.15.6~)
+Recommends: vlc-plugin-notify (= 2.0.3-4), vlc-plugin-pulse (= 2.0.3-4), xdg-utils
+Suggests: videolan-doc
+Breaks: vlc-data (<< 1.1.5), vlc-nox (<< 2.0.2)
+Description: multimedia player and streamer
+ VLC is the VideoLAN project's media player. It plays MPEG, MPEG-2, MPEG-4,
+ DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, DVDs, VCDs,
+ podcasts, and multimedia streams from various network sources.
+ .
+ VLC can also be used as a streaming server that duplicates the stream it
+ reads and multicasts them through the network to other clients, or serves
+ them through HTTP.
+ .
+ VLC has support for on-the-fly transcoding of audio and video formats, either
+ for broadcasting purposes or for movie format transformations. Support for
+ most output methods is provided by this package, but features can be added
+ by installing additional audio plugins (vlc-plugin-pulse, vlc-plugin-sdl)
+ or video plugins (vlc-plugin-sdl).
+Homepage: http://www.videolan.org/vlc/
 
 Package: linux-image-3.2.0-3artax1-686-pae
 Status: deinstall ok config-files
@@ -11528,6 +12906,43 @@ Description: Debian Font Manager -- automatic font configuration framework
  Font packages should register their fonts to Defoma in order to have them
  configured automatically for applications.
 
+Package: libmpeg2-4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 192
+Maintainer: Loic Minier <lool@dooz.org>
+Architecture: i386
+Source: mpeg2dec
+Version: 0.4.1-3
+Depends: libc6 (>= 2.7-1)
+Description: MPEG1 and MPEG2 video decoder library
+ libmpeg2 is a library which can decode MPEG1 and MPEG2 video streams.
+ .
+ The main features in libmpeg2 are:
+ .
+  * Conformance - libmpeg2 is able to decode all mpeg streams that conform to
+    certain restrictions. For streams that follow these restrictions, libmpeg2
+    is probably 100% conformant to the mpeg standards - and there's a pretty
+    extensive test suite to check this.
+ .
+  * Speed - there has been huge efforts there, and libmpeg2 is probably the
+    fastest library around for what it does.
+ .
+  * Portability - most of the code is written in C, and when platform-specific
+    optimizations are used, there always is a generic C routine to fall back
+    on.  This should be portable to all architectures - at least we have heard
+    reports from people running this code on x86, ppc, sparc, arm and sh4.
+ .
+  * Reuseability - libmpeg2 is not intended to include any project-specific
+    code, but it should still include enough features to be used by very
+    diverse projects.
+ .
+ This package contains the libmpeg2 shared libraries.
+ .
+ http://libmpeg2.sourceforge.net/
+Homepage: http://libmpeg2.sourceforge.net/
+
 Package: libpixman-1-0
 Status: install ok installed
 Priority: optional
@@ -11545,6 +12960,34 @@ Description: pixel-manipulation library for X and cairo
  rectangles, image compositing using the Porter/Duff model
  and implicit mask generation for geometric primitives including
  trapezoids, triangles, and rectangles.
+
+Package: libxcb-xv0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 72
+Maintainer: XCB Developers <xcb@lists.freedesktop.org>
+Architecture: i386
+Multi-Arch: same
+Source: libxcb
+Version: 1.8.1-2
+Depends: libc6 (>= 2.1.3), libxcb1
+Pre-Depends: multiarch-support
+Description: X C Binding, xv extension
+ This package contains the library files needed to run software using
+ libxcb-xv, the xv extension for the X C Binding.
+ .
+ The XCB library provides an interface to the X Window System protocol,
+ designed to replace the Xlib interface.  XCB provides several advantages over
+ Xlib:
+ .
+  * Size: small library and lower memory footprint
+  * Latency hiding: batch several requests and wait for the replies later
+  * Direct protocol access: one-to-one mapping between interface and protocol
+  * Thread support: access XCB from multiple threads, with no explicit locking
+  * Easy creation of new extensions: automatically generates interface from
+    machine-parsable protocol descriptions
+Homepage: http://xcb.freedesktop.org
 
 Package: libyajl2
 Status: install ok installed
@@ -11705,6 +13148,21 @@ Description: Miscellaneous system utilities
  your hard disk, view kernel messages, and create new filesystems.
 Homepage: http://userweb.kernel.org/~kzak/util-linux/
 
+Package: libiso9660-8
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 185
+Maintainer: Nicolas Boullis <nboullis@debian.org>
+Architecture: i386
+Source: libcdio
+Version: 0.83-4
+Depends: libc6 (>= 2.3), libcdio13 (>= 0.83)
+Description: library to work with ISO9660 filesystems
+ This library is made to read and write ISO9660 filesystems; those
+ filesystems are mainly used on CDROMs.
+Homepage: http://www.gnu.org/software/libcdio/
+
 Package: libxcursor1
 Status: install ok installed
 Priority: optional
@@ -11744,6 +13202,23 @@ Description: PDF rendering library
  .
  This package contains the shared core library.
 Homepage: http://poppler.freedesktop.org/
+
+Package: libdvbpsi7
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 124
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: libdvbpsi
+Version: 0.2.2-1
+Depends: libc6 (>= 2.1.3)
+Description: library for MPEG TS and DVB PSI tables decoding and generating
+ libdvbpsi is a simple library designed for MPEG TS and DVB PSI tables
+ decoding and generating.
+ .
+ This package contains the libdvbpsi runtime library.
+Homepage: http://www.videolan.org/developers/libdvbpsi.html
 
 Package: xfonts-utils
 Status: install ok installed
@@ -11785,6 +13260,26 @@ Description: a macro processing language
  shell commands, doing arithmetic, etc.  Autoconf needs GNU `m4' for
  generating `configure' scripts, but not for running them.
 Homepage: http://www.gnu.org/software/m4/
+
+Package: libmad0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 132
+Maintainer: Mad Maintainers <pkg-mad-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: libmad
+Version: 0.15.1b-7
+Depends: libc6 (>= 2.1.3)
+Description: MPEG audio decoder library
+ MAD is an MPEG audio decoder. It currently only supports the MPEG 1
+ standard, but fully implements all three audio layers (Layer I, Layer II,
+ and Layer III, the latter often colloquially known as MP3.)
+ .
+ MAD has the following special features:
+   - 100% fixed-point (integer) computation
+   - completely new implementation based on the ISO/IEC 11172-3 standard
+   - distributed under the terms of the GNU General Public License (GPL)
 
 Package: libfontenc1
 Status: install ok installed
@@ -12168,6 +13663,25 @@ Description: Vi IMproved - enhanced vi editor - compact version
  (online documentation, plugins, ...).
 Homepage: http://www.vim.org/
 
+Package: libwebp2
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 227
+Maintainer: Jeff Breidenbach <jab@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libwebp
+Version: 0.1.3-3
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Description: Lossy compression of digital photographic images.
+ Image Compression format, based on the VP8 codec.
+ WebP uses the modern VP8 compression format to deliver efficient
+ compression of images for the web. More than 30% extra gain over
+ optimized JPEG, for same quality, is not unusual.
+Homepage: http://webp.googlecode.com
+
 Package: xorg-docs-core
 Status: install ok installed
 Priority: optional
@@ -12228,6 +13742,28 @@ Description: X.Org X server -- SiliconMotion display driver
  <URL:http://www.X.org>
  .
  This package is built from the X.org xf86-video-siliconmotion driver module.
+
+Package: libfaad2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 320
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: faad2
+Version: 2.7-8
+Replaces: libfaad2-0
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libfaad2-0
+Description: freeware Advanced Audio Decoder - runtime files
+ FAAD2 is the fastest ISO AAC audio decoder available. FAAD2 correctly
+ decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC
+ files.
+ .
+ This package contains the shared library.
+Homepage: http://www.audiocoding.com/
 
 Package: nvidia-detect
 Status: install ok installed

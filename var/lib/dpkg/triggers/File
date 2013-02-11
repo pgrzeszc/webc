@@ -20,3 +20,4 @@
 /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:i386
 /usr/lib/i386-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:i386
 /usr/share/cups/ppd-updaters cups
+/usr/lib/vlc/plugins vlc-nox
