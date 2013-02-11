@@ -1,0 +1,10 @@
+#! /bin/sh
+set -e
+
+# Delete symlink that will be replaced by a directory
+dir="/usr/share/doc/mozilla-plugin-vlc"
+if [ -L $dir ]; then
+    rm $dir 2>/dev/null
+fi
+
+

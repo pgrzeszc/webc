@@ -1,0 +1,14 @@
+cf0022423f5f0664596b018601093a07  usr/lib/i386-linux-gnu/libQtGui.so.4.8.2
+87491053956d6b1647dedb2e62d69b0b  usr/lib/i386-linux-gnu/qt4/plugins/accessible/libqtaccessiblewidgets.so
+2606f7a959e43a8fc4076f35bccf897e  usr/lib/i386-linux-gnu/qt4/plugins/graphicssystems/libqtracegraphicssystem.so
+9fe4edd4ff058771f2361ebe41e270e2  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqgif.so
+257d75feeee5fb3dd33f0ca3ccb39595  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqico.so
+659fac2854ca2c177c69948202638189  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqjpeg.so
+ed8eb614d39b87fecbb2e5e58f1467c8  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqmng.so
+f65caade74877b24414e7b05e339f0f6  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqtga.so
+2abe71046511b91c283a990f63ddb42c  usr/lib/i386-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+8f8cdb0baf448bdf89ee77bb8504fd36  usr/lib/i386-linux-gnu/qt4/plugins/inputmethods/libqimsw-multi.so
+411080a56ff917a5a1aa08c98acae354  usr/share/doc/libqtgui4/LGPL_EXCEPTION.txt
+35cf6cb1b9d3fc8b9d4f0a2083e48012  usr/share/doc/libqtgui4/changelog.Debian.gz
+99d380476d9154b80ffdd772a32eac0a  usr/share/doc/libqtgui4/changelog.gz
+6554abaa9d7013bd3a7b13294c73b55c  usr/share/doc/libqtgui4/copyright
